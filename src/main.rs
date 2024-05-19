@@ -2,6 +2,7 @@
 #![no_std]
 
 use esp_backtrace as _;
+use esp_println::println;
 use esp_hal::{clock::ClockControl, peripherals::Peripherals, prelude::*, delay::Delay};
 
 #[entry]
@@ -13,10 +14,10 @@ fn main() -> ! {
     let delay = Delay::new(&clocks);
 
     esp_println::logger::init_logger_from_env();
-    log::info!("Starting…");
+    println!("Starting…");
 
     loop {
         delay.delay(500.millis());
-        log::info!("Hello world!");
+        println!("Hello world!");
     }
 }
