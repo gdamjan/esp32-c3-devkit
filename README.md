@@ -11,6 +11,12 @@ Bluetooth® Low Energy (Bluetooth LE). It has a 32-bit RISC-V single-core proces
 - `cargo install cargo-binutils` - for `cargo size` and `cargo objdump -- --disassemble`, etc…
 - `cargo install cargo-espflash` - flash and monitor using the [`espflash project`](https://github.com/esp-rs/espflash/tree/main/cargo-espflash)
 
+## Flash and monitor
+
+- `cargo build --release`
+- `cargo espflash flash --release`
+- `cargo espflash monitor`
+
 ## VS Code settings
 
 The repo will also suggest common extensions for VS Code:
@@ -18,3 +24,9 @@ The repo will also suggest common extensions for VS Code:
 - [crates helper](https://marketplace.visualstudio.com/items?itemName=serayuzgur.crates)
 
 and some settings to instruct rust-analyzer to only run for the `riscv32imc-unknown-none-elf` target.
+
+## References
+
+- [ESP32-C3 Series Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf)
+- https://github.com/esp-rs
+- https://docs.esp-rs.org/book/
